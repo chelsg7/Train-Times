@@ -7,18 +7,29 @@
     <title>
         Train Times
     </title>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Added Moment JS -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Moment JS -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- firebase tag -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 
 
     <!-- Stylesheet Links -->
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script src="main.js"></script>
 </head>
 <body>
-    <div class = "container-flex row bg-dark">
+    <div class = "container-flex row bg-dark py-5">
         <div class = "container text-center text-light">
             <h1 class= "display-2">
                 Train Times
@@ -29,7 +40,7 @@
         </div>
     </div>
     <div class = "row py-5">
-        <div class = "container">
+        <div class = "container col-10">
             <div class = "card mx-auto col-12 text-center border-5 border-success">
                 <div class = "card-head py-3 bg-success">
                     <h3>
@@ -37,7 +48,7 @@
                     </h3>
                 </div>
                 <div class="card-block">
-                    <table class="table table-bordered table-striped my-3">
+                    <table class="table table-bordered table-striped my-3" id="trainTable">
                         <thead>
                             <tr>
                                 <th scope="col">
@@ -45,6 +56,9 @@
                                 </th>
                                 <th scope="col">
                                     Destination
+                                </th>
+                                <th scope="col">
+                                    First Train
                                 </th>
                                 <th scope="col">
                                     Frequency
@@ -66,10 +80,13 @@
                                     place 1
                                 </td>
                                 <td>
+                                    first train
+                                </td>
+                                <td>
                                     frequency
                                 </td>
                                 <td>
-                                    next arrival
+                                    next train
                                 </td>
                                 <td>
                                     minutes away
@@ -81,7 +98,7 @@
         </div>
     </div>
     <div class = "row py-5">
-        <div class= "container">
+        <div class= "container col-10">
             <div class = "card mx-auto col-12 text-center border-5 border-success">
                 <div class= "card-head py-3 bg-success">
                     <h3>
@@ -118,7 +135,7 @@
                             </label>
                             <input type="number" class="form-control" id="frequencyInput" placeholder="">
                         </div>
-                        <button type="submit" class="btn btn-success col-5 my-4">
+                        <button type="submit" class="btn btn-success col-5 my-4" id="formSubmit">
                             Submit
                         </button>
                     </div>
@@ -127,10 +144,6 @@
         </div>
     </div>
 </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </body>
 </html>
