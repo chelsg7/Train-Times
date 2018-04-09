@@ -4,7 +4,15 @@ $(document).ready(function() {
     console.log( "ready!" );
     
     var currentTime = moment();
-    console.log ("current time : " + moment(currentTime).format("HH:mm"));
+    var currentTimeH1 = moment(currentTime, "HH:mm").format("HH:mm:ss")
+    console.log ("current time : " + currentTimeH1);
+    
+  
+
+    setInterval(
+        function(){
+            $('#clock').html(currentTimeH1);
+        }, 10);
     
 
 

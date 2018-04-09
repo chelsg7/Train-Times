@@ -1,23 +1,31 @@
 #back{
-    background-color: #353B3C;
+    background-color: #4E4A59;
 }
 
 #purple {
-    background-color: #A2999E;
+    background-color: #394053;
 }
 
-.grey {
-    background-color: #C6C7C4;
+.green {
+    background-color: #7CAE7A;
 }
 
-.head {
-    color: #EEF0F2
+.greenText {
+    color: #7CAE7A;
+}
+
+.purple {
+    color: #394053;
+}
+
+.purple2 {
+    color: #6E6362;
 }
 
 .tHead {
-    color : #846A6A;
+    color : #4E4A59;
 }
 
 #formSubmit {
-    background-color: #846A6A;
+    background-color: #6E6362;
 }
