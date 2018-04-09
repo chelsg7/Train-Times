@@ -8,12 +8,11 @@ $(document).ready(function() {
     console.log ("current time : " + currentTimeH1);
     
   
-// // this is not updating like I want - why
-//     var interval = setInterval(
-//         function(){
-//             $('#clock').html(currentTimeH1);
-            
-//         }, 1000);
+// this is not updating like I want - why
+    // var interval = setInterval(
+    //     function(){
+    //         $('#clock').html(currentTimeH1);
+    //     }, 1000);
     
 
 
