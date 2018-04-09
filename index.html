@@ -25,25 +25,25 @@
 
 
     <!-- Stylesheet Links -->
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <script src="main.js"></script>
+    <script src="assets/javascript/main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
-<body>
-    <div class = "container-flex row bg-dark py-5">
-        <div class = "container text-center text-light">
-            <h1 class= "display-2">
+<body class = "container-flex" id = "back">
+    <div class = "row py-5" id = "purple">
+        <div class = "container text-center">
+            <h1 class= "display-2 head">
                 Train Times
             </h1>
-            <h2>
+            <h2 class = "display-4 head">
                 Choo Choo
             </h2>
         </div>
     </div>
     <div class = "row py-5">
         <div class = "container col-10">
-            <div class = "card mx-auto col-12 text-center border-5 border-success">
-                <div class = "card-head py-3 bg-success">
-                    <h3>
+            <div class = "card mx-auto col-12 text-center border-5 grey" >
+                <div class = "card-head py-3">
+                    <h3 class = "display-4 tHead">
                         Current Train Schedule
                     </h3>
                 </div>
@@ -73,25 +73,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td scope="row">
-                                    name 1
-                                </td>
-                                <td>
-                                    place 1
-                                </td>
-                                <td>
-                                    first train
-                                </td>
-                                <td>
-                                    frequency
-                                </td>
-                                <td>
-                                    next train
-                                </td>
-                                <td>
-                                    minutes away
-                                </td>
                             </tr>
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -99,9 +82,9 @@
     </div>
     <div class = "row py-5">
         <div class= "container col-10">
-            <div class = "card mx-auto col-12 text-center border-5 border-success">
-                <div class= "card-head py-3 bg-success">
-                    <h3>
+            <div class = "card mx-auto col-12 text-center border-5 grey">
+                <div class= "card-head py-3">
+                    <h3 class = "display-4 tHead">
                         Add Train
                     </h3>
                 </div>
@@ -111,13 +94,13 @@
                             <label for="trainName">
                                 Train Name
                             </label>
-                            <input type="text" class="form-control" id="trainNameInput" placeholder="">
+                            <input type="text" class="form-control" id="trainName" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="destination">
                                 Destination
                             </label>
-                            <input type="text" class="form-control" id="destinationInput" placeholder="">
+                            <input type="text" class="form-control" id="destination" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="firstTrainTime">
@@ -125,7 +108,7 @@
                                 <br>
                                 (HH : mm = military time)
                             </label>
-                            <input type="text" class="form-control" id="firstTrainInput" placeholder="">
+                            <input type="text" class="form-control" id="firstTrainTime" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="frequency">
@@ -133,9 +116,9 @@
                                 <br>
                                 (min)
                             </label>
-                            <input type="number" class="form-control" id="frequencyInput" placeholder="">
+                            <input type="number" class="form-control" id="frequency" placeholder="">
                         </div>
-                        <button type="submit" class="btn btn-success col-5 my-4" id="formSubmit">
+                        <button type="submit" class="btn border-dark col-5 my-4" id="formSubmit">
                             Submit
                         </button>
                     </div>
